@@ -5,10 +5,10 @@ var serverLogger = require('./serverLogger');
 var express = require('express');
 
 var app = express();
-app.set('views', __dirname + "/views");
+app.set('views', __dirname);
 app.set('view engine', 'jade');
-var favicon=require('serve-favicon');
-app.use(favicon(__dirname + '/public/favicon.ico'));
+
+app.use(express.static(__dirname + '/public'));
 
 app.get('*', function(req, res){
     serverLogger.info('Received request for: %s', req.url);
