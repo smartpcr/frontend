@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <my-directive>
+        {{title}}
+        <div ng-repeat="val in values">
+            {{val}}
+        </div>
+    </my-directive>
+
+    <script type="text/javascript" src="../bower_components/angular/angular.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+</body>
+</html>
